@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}index{% endblock %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    <a href="/insert"><button style="background-color: #abef98">Tambah Data</button></a><br>
+    <br>
+    <table border="1" style="width: 700px; border-collapse: collapse;">
+        <thead>
+            <tr bgcolor="#a9a9a9">
+                <th>Judul Games</th>
+                <th>Genre</th>
+                <th>Media</th>
+                <th>Lokasi</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for d in data %}
+            <tr>
+                <td>{{ d.judul }}</td>
+                <td>{{ d.genre }}</td>
+                <td>{{ d.media }}</td>
+                <td>{{ d.lokasi }}</td>
+                <td align="center">
+                    <a href="/update/{{d.id_games}}"><button>Update</button></a>&nbsp;
+                    <a href="/delete/{{d.id_games}}" onclick="return confirm('Yakin Dihapus?')"><button>Hapus</button></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table><br>
+
+{% endblock %}

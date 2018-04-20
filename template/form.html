@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>{{title}}</h2><br>
+    <form method="POST">
+        <table>
+            <tr>
+                <td><label>Judul :</label></td><td><input type="text" name="judul"><br></td>
+            </tr>
+            <tr>
+                <td><label>Genre :</label></td><td><input type="text" name="genre"><br></td>
+            </tr>
+            <tr>
+                <td><label>Media :</label></td><td><input type="text" name="media"><br></td>
+            </tr>
+            <tr>
+                <td><label>Lokasi :</label></td><td><input type="text" name="lokasi"><br></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Simpan "></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

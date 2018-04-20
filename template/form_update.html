@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>{{title}}</h2><br>
+<form method="POST">
+    <table>
+        <tr>
+            <td><label>ID Games :</label></td><td><input type="text" name="judul" value="{{data.id_games}}" disabled><br></td>
+        </tr>
+        <tr>
+            <td><label>Judul :</label></td><td><input type="text" name="judul" value="{{data.judul}}"><br></td>
+        </tr>
+        <tr>
+            <td><label>Genre :</label></td><td><input type="text" name="genre" value="{{data.genre}}"><br></td>
+        </tr>
+        <tr>
+            <td><label>Media :</label></td><td><input type="text" name="media" value="{{data.media}}"><br></td>
+        </tr>
+        <tr>
+            <td><label>Lokasi :</label></td><td><input type="text" name="lokasi" value="{{data.lokasi}}"><br></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="Simpan "></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}
